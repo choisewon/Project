@@ -7,25 +7,26 @@
  */
 public class Robot
 {
-    public void RobotWalk()
-    {
+    public static void main(String[] args)
+    {        
         double speed = 10;
-        String tratfic_signal;
-        if (tratfic_signal == "녹색")
+        String traffic_signal = "노란색";
+        
+        speed = RobotWalk(traffic_signal, speed);
+        System.out.println(speed);
+    }
+    public static double RobotWalk(String traffic_signal, double speed)
+    {
+        if (traffic_signal == "녹색"){}
+        else if (traffic_signal == "노란색")
         {
-            
-        }
-        else if (tratfic_signal == "노란색")
-        {
-            speed = speed*1.2;
+            speed = speed * 1.2;
         }
         else
         {
             speed = 0;
         }
+        return speed;
     }
-    public static void main(String[] args)
-    {
-        RobotWalk();
-    }
+
 }
