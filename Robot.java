@@ -36,9 +36,6 @@ public class Robot
         current_speed = RobotWalk(traffic_signal, current_speed);
         System.out.println("기대 결과 : 0.0");
         System.out.println("결과 : " + current_speed);
-        
-        
-        System.out.println(current_speed);
     }
     
     /**
