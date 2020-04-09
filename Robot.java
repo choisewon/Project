@@ -1,32 +1,62 @@
 
 /**
- * 여기에 RobotWalk 클래스 설명을 작성하십시오.
+ * 로봇 보행속도 변경을 할 Robotwalk 메소드와 메소드를 테스트 할 메인 메소드가 담겨있는 클래스
  * 
  * @author (작성자 이름) 
  * @version (버전번호나 날짜)
  */
 public class Robot
 {
+   /**
+   * 메인 메소드 - RobotWalk 모듈 테스트
+   */
     public static void main(String[] args)
     {        
-        double speed = 10;
-        String traffic_signal = "노란색";
+        double current_speed;
+        String traffic_signal;
         
-        speed = RobotWalk(traffic_signal, speed);
-        System.out.println(speed);
+        System.out.println("Testcase1 - traffic_signal : 녹색 current_speed : 10");
+        current_speed = 10;
+        traffic_signal = "녹색";
+        current_speed = RobotWalk(traffic_signal, current_speed);
+        System.out.println("기대 결과 : 10.0");
+        System.out.println("결과 : " + current_speed);
+        
+        System.out.println("Testcase2 - traffic_signal : 노란색 current_speed : 10");
+        current_speed = 10;
+        traffic_signal = "노란색";
+        current_speed = RobotWalk(traffic_signal, current_speed);
+        System.out.println("기대 결과 : 12.0");
+        System.out.println("결과 : " + current_speed);
+        
+        
+        System.out.println("Testcase3 - traffic_signal : 빨간색 current_speed : 10");
+        current_speed = 10;
+        traffic_signal = "빨간색";
+        current_speed = RobotWalk(traffic_signal, current_speed);
+        System.out.println("기대 결과 : 0.0");
+        System.out.println("결과 : " + current_speed);
+        
+        
+        System.out.println(current_speed);
     }
-    public static double RobotWalk(String traffic_signal, double speed)
+    
+    /**
+     * RobotWalk - 로봇 보행속도 변경 모듈
+     * @param  traffic_signal:String  현재 신호의 상태를 받아온다.
+               speed:double  현재 로봇의 속도를 받아온다.
+     * @return  신호에 의해 변경된 로봇의 속도 type:double
+     */
+    public static double RobotWalk(String traffic_signal, double current_speed)
     {
         if (traffic_signal == "녹색"){}
-        else if (traffic_signal == "노란색")
-        {
-            speed = speed * 1.2;
+        else if (traffic_signal == "노란색"){
+            current_speed *= 1.2;
         }
-        else
-        {
-            speed = 0;
+        else{
+            current_speed = 0;
         }
-        return speed;
+        return current_speed;
     }
 
 }
