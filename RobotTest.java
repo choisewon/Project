@@ -1,9 +1,9 @@
 
 /**
- * 여기에 RobotTest 클래스 설명을 작성하십시오.
+ * Robot Walk 메소드를 테스트하는 메인 메소드가 있는 클래스
  * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * @author (2018315003 최세원, 2018315036 양유석) 
+ * @version (2020/04/10)
  */
 public class RobotTest
 {
