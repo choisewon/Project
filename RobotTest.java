@@ -12,6 +12,7 @@ public class RobotTest
         String traffic_signal;
         double robot_speed;
         
+        //TestCase1
         System.out.println("Testcase1 - traffic_signal : 녹색 current_speed : 10");
         Robot r1 = new Robot(10);
         traffic_signal = "녹색";
@@ -19,6 +20,7 @@ public class RobotTest
         System.out.println("기대 결과 : 10.0");
         System.out.println("결과 : " + robot_speed);
         
+        //TestCase2
         System.out.println("Testcase2 - traffic_signal : 노란색 current_speed : 10");
         Robot r2 = new Robot(10);
         traffic_signal = "노란색";
@@ -26,6 +28,7 @@ public class RobotTest
         System.out.println("기대 결과 : 12.0");
         System.out.println("결과 : " + robot_speed);
         
+        //TestCase3
         System.out.println("Testcase3 - traffic_signal : 빨간색 current_speed : 10");
         Robot r3 = new Robot(10);
         traffic_signal = "빨간색";
