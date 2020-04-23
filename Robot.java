@@ -1,4 +1,3 @@
-
 /**
  * 로봇 보행속도 변경을 할 Robotwalk 메소드가 있는 클래스
  * 
@@ -7,10 +6,15 @@
  */
 public class Robot
 {
-    double current_speed;
+    private double current_speed;
     
     public Robot(double speed){
         current_speed = speed;
+    }
+    
+    public double  getSpeed()
+    {
+        return this.current_speed;
     }
     
     /**
@@ -19,7 +23,7 @@ public class Robot
                speed:double  현재 로봇의 속도를 받아온다.
      * @return  신호에 의해 변경된 로봇의 속도 type:double
      */
-    public double RobotWalk(String traffic_signal)
+    public void RobotWalk(String traffic_signal)
     {
         if (traffic_signal == "녹색"){}
         else if (traffic_signal == "노란색"){
@@ -28,6 +32,6 @@ public class Robot
         else{
             this.current_speed = 0;
         }
-        return this.current_speed;
+        //return this.current_speed;
     }
 }
