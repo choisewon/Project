@@ -2,7 +2,7 @@
  * 로봇 보행속도 변경을 할 Robotwalk 메소드가 있는 클래스
  * 
  * @author (2018315003 최세원, 2018315036 양유석 ) 
- * @version (2020/04/09)
+ * @version (2020/04/23)
  */
 public class Robot
 {
